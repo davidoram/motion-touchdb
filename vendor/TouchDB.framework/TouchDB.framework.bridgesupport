@@ -1,0 +1,1127 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct type='{TDChangesOptions=&quot;limit&quot;I&quot;contentOptions&quot;I&quot;includeDocs&quot;B&quot;includeConflicts&quot;B&quot;sortBySequence&quot;B}' name='TDChangesOptions'>
+<field type='I' name='limit' declared_type='unsigned int'/>
+<field type='I' name='contentOptions' declared_type='TDContentOptions'/>
+<field type='B' name='includeDocs' declared_type='BOOL'/>
+<field type='B' name='includeConflicts' declared_type='BOOL'/>
+<field type='B' name='sortBySequence' declared_type='BOOL'/>
+</struct>
+<struct type='{TDQueryOptions=&quot;startKey&quot;@&quot;endKey&quot;@&quot;keys&quot;@&quot;NSArray&quot;&quot;skip&quot;I&quot;limit&quot;I&quot;groupLevel&quot;I&quot;content&quot;I&quot;descending&quot;B&quot;includeDocs&quot;B&quot;updateSeq&quot;B&quot;inclusiveEnd&quot;B&quot;reduce&quot;B&quot;group&quot;B&quot;includeDeletedDocs&quot;B}' name='TDQueryOptions'>
+<field type='@' name='startKey' declared_type='id'/>
+<field type='@' name='endKey' declared_type='id'/>
+<field type='@&quot;NSArray&quot;' name='keys' declared_type='NSArray*'/>
+<field type='I' name='skip' declared_type='unsigned int'/>
+<field type='I' name='limit' declared_type='unsigned int'/>
+<field type='I' name='groupLevel' declared_type='unsigned int'/>
+<field type='I' name='content' declared_type='TDContentOptions'/>
+<field type='B' name='descending' declared_type='BOOL'/>
+<field type='B' name='includeDocs' declared_type='BOOL'/>
+<field type='B' name='updateSeq' declared_type='BOOL'/>
+<field type='B' name='inclusiveEnd' declared_type='BOOL'/>
+<field type='B' name='reduce' declared_type='BOOL'/>
+<field type='B' name='group' declared_type='BOOL'/>
+<field type='B' name='includeDeletedDocs' declared_type='BOOL'/>
+</struct>
+<struct type='{TD_DatabaseManagerOptions=&quot;readOnly&quot;B&quot;noReplicator&quot;B}' name='TD_DatabaseManagerOptions'>
+<field type='B' name='readOnly' declared_type='_Bool'/>
+<field type='B' name='noReplicator' declared_type='_Bool'/>
+</struct>
+<constant type='@' name='TDReplicatorProgressChangedNotification' declared_type='NSString*'/>
+<constant type='@' name='TDReplicatorStoppedNotification' declared_type='NSString*'/>
+<constant type='@' name='TD_DatabaseChangeNotification' declared_type='NSString*' const='true'/>
+<constant type='@' name='TD_DatabaseWillBeDeletedNotification' declared_type='NSString*' const='true'/>
+<constant type='@' name='TD_DatabaseWillCloseNotification' declared_type='NSString*' const='true'/>
+<constant type='{TDChangesOptions=IIBBB}' name='kDefaultTDChangesOptions' declared_type='TDChangesOptions' const='true'/>
+<constant type='{TDQueryOptions=@@@IIIIBBBBBBB}' name='kDefaultTDQueryOptions' declared_type='TDQueryOptions' const='true'/>
+<constant type='{TD_DatabaseManagerOptions=BB}' name='kTD_DatabaseManagerDefaultOptions' declared_type='TD_DatabaseManagerOptions' const='true'/>
+<enum name='kTDAttachmentEncodingGZIP' value='1'/>
+<enum name='kTDAttachmentEncodingNone' value='0'/>
+<enum name='kTDBigAttachmentsFollow' value='64'/>
+<enum name='kTDIncludeAttachments' value='1'/>
+<enum name='kTDIncludeConflicts' value='2'/>
+<enum name='kTDIncludeLocalSeq' value='16'/>
+<enum name='kTDIncludeRevs' value='4'/>
+<enum name='kTDIncludeRevsInfo' value='8'/>
+<enum name='kTDLeaveAttachmentsEncoded' value='32'/>
+<enum name='kTDNoBody' value='128'/>
+<enum name='kTDStatusAccepted' value='206'/>
+<enum name='kTDStatusAttachmentError' value='592'/>
+<enum name='kTDStatusAttachmentNotFound' value='492'/>
+<enum name='kTDStatusBadAttachment' value='491'/>
+<enum name='kTDStatusBadEncoding' value='490'/>
+<enum name='kTDStatusBadID' value='494'/>
+<enum name='kTDStatusBadJSON' value='493'/>
+<enum name='kTDStatusBadParam' value='495'/>
+<enum name='kTDStatusBadRequest' value='400'/>
+<enum name='kTDStatusCallbackError' value='593'/>
+<enum name='kTDStatusConflict' value='409'/>
+<enum name='kTDStatusCorruptError' value='591'/>
+<enum name='kTDStatusCreated' value='201'/>
+<enum name='kTDStatusDBError' value='590'/>
+<enum name='kTDStatusDeleted' value='496'/>
+<enum name='kTDStatusDuplicate' value='412'/>
+<enum name='kTDStatusException' value='594'/>
+<enum name='kTDStatusForbidden' value='403'/>
+<enum name='kTDStatusNotAcceptable' value='406'/>
+<enum name='kTDStatusNotFound' value='404'/>
+<enum name='kTDStatusNotModified' value='304'/>
+<enum name='kTDStatusOK' value='200'/>
+<enum name='kTDStatusServerError' value='500'/>
+<enum name='kTDStatusUnauthorized' value='401'/>
+<enum name='kTDStatusUnsupportedType' value='415'/>
+<enum name='kTDStatusUpstreamError' value='589'/>
+<enum name='kTDViewCollationASCII' value='2'/>
+<enum name='kTDViewCollationRaw' value='1'/>
+<enum name='kTDViewCollationUnicode' value='0'/>
+<function name='TDCollateRevIDs'>
+<arg type='^v' name='context' declared_type='void*'/>
+<arg type='i' name='len1' declared_type='int'/>
+<arg type='^v' name='chars1' declared_type='void*' const='true'/>
+<arg type='i' name='len2' declared_type='int'/>
+<arg type='^v' name='chars2' declared_type='void*' const='true'/>
+<retval type='i' declared_type='int'/>
+</function>
+<function name='TDCompareRevIDs'>
+<arg type='@' name='revID1' declared_type='NSString*'/>
+<arg type='@' name='revID2' declared_type='NSString*'/>
+<retval type='i' declared_type='NSComparisonResult'/>
+</function>
+<function name='TDStartServer'>
+<arg type='@' name='serverDirectory' declared_type='NSString*'/>
+<arg type='^@' name='outError' declared_type='NSError**'/>
+<retval type='@' declared_type='NSURL*'/>
+</function>
+<function inline='true' name='TDStatusIsError'>
+<arg type='^?' name='status' declared_type='TDStatus*' function_pointer='true'>
+<arg type='i' declared_type='int'/>
+<retval type='i' declared_type='int'/>
+</arg>
+<retval type='B' declared_type='_Bool'/>
+</function>
+<function name='TDStatusToHTTPStatus'>
+<arg type='^?' name='status' declared_type='TDStatus*' function_pointer='true'>
+<arg type='i' declared_type='int'/>
+<retval type='i' declared_type='int'/>
+</arg>
+<arg type='^@' name='outMessage' declared_type='NSString**'/>
+<retval type='i' declared_type='int'/>
+</function>
+<function name='TDStatusToNSError'>
+<arg type='^?' name='status' declared_type='TDStatus*' function_pointer='true'>
+<arg type='i' declared_type='int'/>
+<retval type='i' declared_type='int'/>
+</arg>
+<arg type='@' name='url' declared_type='NSURL*'/>
+<retval type='@' declared_type='NSError*'/>
+</function>
+<class name='NSObject'>
+<method selector='allowChangesOnlyTo:'>
+<arg type='@' index='0' name='allowedKeys' declared_type='NSArray*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='changedKeys'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='compileMapFunction:language:'>
+<arg type='@' index='0' name='mapSource' declared_type='NSString*'/>
+<arg type='@' index='1' name='language' declared_type='NSString*'/>
+<retval type='@?' declared_type='TDMapBlock' function_pointer='true'>
+<arg type='@' declared_type='NSDictionary*'/>
+<arg type='@?' declared_type='TDMapEmitBlock'/>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+<method selector='compileReduceFunction:language:'>
+<arg type='@' index='0' name='reduceSource' declared_type='NSString*'/>
+<arg type='@' index='1' name='language' declared_type='NSString*'/>
+<retval type='@?' declared_type='TDReduceBlock' function_pointer='true'>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='B' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</retval>
+</method>
+<method selector='currentRevision'>
+<retval type='^i' declared_type='int*'/>
+</method>
+<method selector='disallowChangesTo:'>
+<arg type='@' index='0' name='disallowedKeys' declared_type='NSArray*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='enumerateChanges:'>
+<arg type='@?' index='0' name='enumerator' declared_type='TDChangeEnumeratorBlock' function_pointer='true'>
+<arg type='@' declared_type='NSString*'/>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='errorMessage'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='errorType'>
+<retval type='i' declared_type='int'/>
+</method>
+<method selector='setErrorMessage:'>
+<arg type='@' index='0' name='errorMessage' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setErrorType:'>
+<arg type='i' index='0' name='errorType' declared_type='int'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='TDPulledRevision'>
+<method selector='conflicted'>
+<retval type='B' declared_type='_Bool'/>
+</method>
+<method selector='remoteSequenceID'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='setConflicted:'>
+<arg type='B' index='0' name='conflicted' declared_type='_Bool'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setRemoteSequenceID:'>
+<arg type='@' index='0' name='remoteSequenceID' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='TDPusher'>
+<method selector='createTarget'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setCreateTarget:'>
+<arg type='B' index='0' name='createTarget' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='TDReplicator'>
+<method selector='active'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='activeRequestsStatus'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='authorizer'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='changesProcessed'>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method selector='changesTotal'>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method selector='continuous'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='db'>
+<retval type='@' declared_type='TD_Database*'/>
+</method>
+<method selector='error'>
+<retval type='@' declared_type='NSError*'/>
+</method>
+<method selector='filterName'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='filterParameters'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='initWithDB:remote:push:continuous:'>
+<arg type='@' index='0' name='db' declared_type='TD_Database*'/>
+<arg type='@' index='1' name='remote' declared_type='NSURL*'/>
+<arg type='B' index='2' name='push' declared_type='BOOL'/>
+<arg type='B' index='3' name='continuous' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isPush'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='online'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='options'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='progressChangedNotification' class_method='true'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='remote'>
+<retval type='@' declared_type='NSURL*'/>
+</method>
+<method selector='requestHeaders'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='running'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='sessionID'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='setAuthorizer:'>
+<arg type='@' index='0' name='authorizer' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setDb:'>
+<arg type='@' index='0' name='db' declared_type='TD_Database*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setError:'>
+<arg type='@' index='0' name='error' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setFilterName:'>
+<arg type='@' index='0' name='filterName' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setFilterParameters:'>
+<arg type='@' index='0' name='filterParameters' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setOptions:'>
+<arg type='@' index='0' name='options' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setRequestHeaders:'>
+<arg type='@' index='0' name='requestHeaders' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSessionID:'>
+<arg type='@' index='0' name='sessionID' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='start'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='stop'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='stoppedNotification' class_method='true'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</class>
+<class name='TDResponse'>
+<method selector='baseContentType'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='body'>
+<retval type='@' declared_type='TD_Body*'/>
+</method>
+<method selector='bodyObject'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='headers'>
+<retval type='@' declared_type='NSMutableDictionary*'/>
+</method>
+<method selector='internalStatus'>
+<retval type='?' declared_type='TDStatus'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg type='@' index='0' name='header' declared_type='NSString*'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='reset'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setBody:'>
+<arg type='@' index='0' name='body' declared_type='TD_Body*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setBodyObject:'>
+<arg type='@' index='0' name='bodyObject' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setHeaders:'>
+<arg type='@' index='0' name='headers' declared_type='NSMutableDictionary*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setInternalStatus:'>
+<arg type='?' index='0' name='internalStatus' declared_type='TDStatus'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMultipartBody:'>
+<arg type='@' index='0' name='mp' declared_type='TDMultipartWriter*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMultipartBody:type:'>
+<arg type='@' index='0' name='parts' declared_type='NSArray*'/>
+<arg type='@' index='1' name='type' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setObject:forKeyedSubscript:'>
+<arg type='@' index='0' name='value' declared_type='NSString*'/>
+<arg type='@' index='1' name='header' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setStatus:'>
+<arg type='i' index='0' name='status' declared_type='int'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setStatusReason:'>
+<arg type='@' index='0' name='statusReason' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='status'>
+<retval type='i' declared_type='int'/>
+</method>
+<method selector='statusMsg'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='statusReason'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</class>
+<class name='TDRouter'>
+<method selector='bodyAsDictionary'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='boolQuery:'>
+<arg type='@' index='0' name='param' declared_type='NSString*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='cacheWithEtag:'>
+<arg type='@' index='0' name='etag' declared_type='NSString*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='contentOptions'>
+<retval type='I' declared_type='TDContentOptions'/>
+</method>
+<method selector='finished'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='getQueryOptions:'>
+<arg type='^{TDQueryOptions=@@@IIIIBBBBBBB}' index='0' name='options' declared_type='struct TDQueryOptions*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='ifMatch'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='initWithServer:request:isLocal:'>
+<arg type='@' index='0' name='server' declared_type='TD_Server*'/>
+<arg type='@' index='1' name='request' declared_type='NSURLRequest*'/>
+<arg type='B' index='2' name='isLocal' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='intQuery:defaultValue:'>
+<arg type='@' index='0' name='param' declared_type='NSString*'/>
+<arg type='i' index='1' name='defaultValue' declared_type='int'/>
+<retval type='i' declared_type='int'/>
+</method>
+<method selector='jsonQueries'>
+<retval type='@' declared_type='NSMutableDictionary*'/>
+</method>
+<method selector='jsonQuery:error:'>
+<arg type='@' index='0' name='param' declared_type='NSString*'/>
+<arg type='^@' index='1' name='outError' declared_type='NSError**'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='multipartRequestType'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='onAccessCheck'>
+<retval type='i' declared_type='int'/>
+</method>
+<method selector='onDataAvailable'>
+<retval type='@?' declared_type='OnDataAvailableBlock' function_pointer='true'>
+<arg type='@' declared_type='NSData*'/>
+<arg type='B' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+<method selector='onFinished'>
+<retval type='@?' declared_type='OnFinishedBlock' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+<method selector='onResponseReady'>
+<retval type='@?' declared_type='OnResponseReadyBlock' function_pointer='true'>
+<arg type='@' declared_type='TDResponse*'/>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+<method selector='openDB'>
+<retval type='?' declared_type='TDStatus'/>
+</method>
+<method selector='processRanges'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='query:'>
+<arg type='@' index='0' name='param' declared_type='NSString*'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='request'>
+<retval type='@' declared_type='NSURLRequest*'/>
+</method>
+<method selector='response'>
+<retval type='@' declared_type='TDResponse*'/>
+</method>
+<method selector='sendResponseBodyAndFinish:'>
+<arg type='B' index='0' name='finished' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='sendResponseHeaders'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setOnAccessCheck:'>
+<arg type='i' index='0' name='onAccessCheck' declared_type='int'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setOnDataAvailable:'>
+<arg type='@?' index='0' name='onDataAvailable' declared_type='OnDataAvailableBlock' function_pointer='true'>
+<arg type='@' declared_type='NSData*'/>
+<arg type='B' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setOnFinished:'>
+<arg type='@?' index='0' name='onFinished' declared_type='OnFinishedBlock' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setOnResponseReady:'>
+<arg type='@?' index='0' name='onResponseReady' declared_type='OnResponseReadyBlock' function_pointer='true'>
+<arg type='@' declared_type='TDResponse*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setProcessRanges:'>
+<arg type='B' index='0' name='processRanges' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='start'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='stop'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='versionString' class_method='true'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</class>
+<class name='TDURLProtocol'>
+<method selector='HTTPURLForServerURL:' class_method='true'>
+<arg type='@' index='0' name='serverURL' declared_type='NSURL*'/>
+<retval type='@' declared_type='NSURL*'/>
+</method>
+<method selector='registerServer:' class_method='true'>
+<arg type='@' index='0' name='server' declared_type='TD_Server*'/>
+<retval type='@' declared_type='NSURL*'/>
+</method>
+<method selector='registerServer:forHostname:' class_method='true'>
+<arg type='@' index='0' name='server' declared_type='TD_Server*'/>
+<arg type='@' index='1' name='hostname' declared_type='NSString*'/>
+<retval type='@' declared_type='NSURL*'/>
+</method>
+<method selector='rootURL' class_method='true'>
+<retval type='@' declared_type='NSURL*'/>
+</method>
+<method selector='server' class_method='true'>
+<retval type='@' declared_type='TD_Server*'/>
+</method>
+<method selector='serverForHostname:' class_method='true'>
+<arg type='@' index='0' name='hostname' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_Server*'/>
+</method>
+<method selector='setServer:' class_method='true'>
+<arg type='@' index='0' name='server' declared_type='TD_Server*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='unregisterServer:' class_method='true'>
+<arg type='@' index='0' name='server' declared_type='TD_Server*'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='TD_Attachment'>
+<method selector='contentType'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='initWithName:contentType:'>
+<arg type='@' index='0' name='name' declared_type='NSString*'/>
+<arg type='@' index='1' name='contentType' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isValid'>
+<retval type='B' declared_type='_Bool'/>
+</method>
+<method selector='name'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</class>
+<class name='TD_Body'>
+<method selector='asJSON'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='asJSONString'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='asObject'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='asPrettyJSON'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='bodyWithJSON:' class_method='true'>
+<arg type='@' index='0' name='json' declared_type='NSData*'/>
+<retval type='@' declared_type='TD_Body*'/>
+</method>
+<method selector='bodyWithProperties:' class_method='true'>
+<arg type='@' index='0' name='properties' declared_type='id'/>
+<retval type='@' declared_type='TD_Body*'/>
+</method>
+<method selector='error'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='initWithArray:'>
+<arg type='@' index='0' name='array' declared_type='NSArray*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithJSON:'>
+<arg type='@' index='0' name='json' declared_type='NSData*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithProperties:'>
+<arg type='@' index='0' name='properties' declared_type='NSDictionary*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isValidJSON'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg type='@' index='0' name='key' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='properties'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+</class>
+<class name='TD_Database'>
+<method selector='allViews'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='beginTransaction'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='changesSinceSequence:options:filter:params:'>
+<arg type='@' index='0' name='lastSequence' declared_type='id'/>
+<arg type='^{TDChangesOptions=IIBBB}' index='1' name='options' declared_type='TDChangesOptions*' const='true'/>
+<arg type='@?' index='2' name='filter' declared_type='TD_FilterBlock' function_pointer='true'>
+<arg type='^i' declared_type='int*'/>
+<arg type='@' declared_type='NSDictionary*'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<arg type='@' index='3' name='filterParams' declared_type='NSDictionary*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='close'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='createEmptyDBAtPath:' class_method='true'>
+<arg type='@' index='0' name='path' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_Database*'/>
+</method>
+<method selector='defineFilter:asBlock:'>
+<arg type='@' index='0' name='filterName' declared_type='NSString*'/>
+<arg type='@?' index='1' name='filterBlock' declared_type='TD_FilterBlock' function_pointer='true'>
+<arg type='^i' declared_type='int*'/>
+<arg type='@' declared_type='NSDictionary*'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='deleteDatabase:'>
+<arg type='^@' index='0' name='outError' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='documentCount'>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method selector='endTransaction:'>
+<arg type='B' index='0' name='commit' declared_type='BOOL'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='existingViewNamed:'>
+<arg type='@' index='0' name='name' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_View*'/>
+</method>
+<method selector='exists'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='existsDocumentWithID:revisionID:'>
+<arg type='@' index='0' name='docID' declared_type='NSString*'/>
+<arg type='@' index='1' name='revID' declared_type='NSString*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='filterNamed:'>
+<arg type='@' index='0' name='filterName' declared_type='NSString*'/>
+<retval type='@?' declared_type='TD_FilterBlock' function_pointer='true'>
+<arg type='^i' declared_type='int*'/>
+<arg type='@' declared_type='NSDictionary*'/>
+<retval type='B' declared_type='BOOL'/>
+</retval>
+</method>
+<method selector='findCommonAncestorOf:withRevIDs:'>
+<arg type='@' index='0' name='rev' declared_type='id'/>
+<arg type='@' index='1' name='revIDs' declared_type='NSArray*'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='getAllDocs:'>
+<arg type='^{TDQueryOptions=@@@IIIIBBBBBBB}' index='0' name='options' declared_type='struct TDQueryOptions*' const='true'/>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='getAllRevisionsOfDocumentID:onlyCurrent:'>
+<arg type='@' index='0' name='docID' declared_type='NSString*'/>
+<arg type='B' index='1' name='onlyCurrent' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='getDocsWithIDs:options:'>
+<arg type='@' index='0' name='docIDs' declared_type='NSArray*'/>
+<arg type='^{TDQueryOptions=@@@IIIIBBBBBBB}' index='1' name='options' declared_type='struct TDQueryOptions*' const='true'/>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='getDocumentWithID:revisionID:'>
+<arg type='@' index='0' name='docID' declared_type='NSString*'/>
+<arg type='@' index='1' name='revID' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='getDocumentWithID:revisionID:options:status:'>
+<arg type='@' index='0' name='docID' declared_type='NSString*'/>
+<arg type='@' index='1' name='revID' declared_type='NSString*'/>
+<arg type='I' index='2' name='options' declared_type='TDContentOptions'/>
+<arg type='@' index='3' name='outStatus' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='getPossibleAncestorRevisionIDs:limit:'>
+<arg type='@' index='0' name='rev' declared_type='id'/>
+<arg type='I' index='1' name='limit' declared_type='unsigned int'/>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='getRevisionHistory:'>
+<arg type='@' index='0' name='rev' declared_type='id'/>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='getRevisionHistoryDict:'>
+<arg type='@' index='0' name='rev' declared_type='id'/>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='inTransaction:'>
+<arg type='@' index='0' name='block' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithPath:'>
+<arg type='@' index='0' name='path' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='lastSequence'>
+<retval type='i' declared_type='int'/>
+</method>
+<method selector='loadRevisionBody:options:'>
+<arg type='@' index='0' name='rev' declared_type='id'/>
+<arg type='I' index='1' name='options' declared_type='TDContentOptions'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='name'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='open'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='path'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='privateUUID'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='publicUUID'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='readOnly'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='replaceWithDatabaseFile:withAttachments:error:'>
+<arg type='@' index='0' name='databasePath' declared_type='NSString*'/>
+<arg type='@' index='1' name='attachmentsPath' declared_type='NSString*'/>
+<arg type='^@' index='2' name='outError' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setReadOnly:'>
+<arg type='B' index='0' name='readOnly' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='totalDataSize'>
+<retval type='Q' declared_type='UInt64'/>
+</method>
+<method selector='viewNamed:'>
+<arg type='@' index='0' name='name' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_View*'/>
+</method>
+</class>
+<class name='TD_DatabaseManager'>
+<method selector='allDatabaseNames'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='allOpenDatabases'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='close'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='databaseNamed:'>
+<arg type='@' index='0' name='name' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_Database*'/>
+</method>
+<method selector='deleteDatabaseNamed:'>
+<arg type='@' index='0' name='name' declared_type='NSString*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='directory'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='existingDatabaseNamed:'>
+<arg type='@' index='0' name='name' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_Database*'/>
+</method>
+<method selector='initWithDirectory:options:error:'>
+<arg type='@' index='0' name='dirPath' declared_type='NSString*'/>
+<arg type='^{TD_DatabaseManagerOptions=BB}' index='1' name='options' declared_type='TD_DatabaseManagerOptions*' const='true'/>
+<arg type='^@' index='2' name='outError' declared_type='NSError**'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isValidDatabaseName:' class_method='true'>
+<arg type='@' index='0' name='name' declared_type='NSString*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+</class>
+<class name='TD_Revision'>
+<method selector='asJSON'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='body'>
+<retval type='@' declared_type='TD_Body*'/>
+</method>
+<method selector='compareSequences:'>
+<arg type='@' index='0' name='rev' declared_type='TD_Revision*'/>
+<retval type='i' declared_type='NSComparisonResult'/>
+</method>
+<method selector='copyWithDocID:revID:'>
+<arg type='@' index='0' name='docID' declared_type='NSString*'/>
+<arg type='@' index='1' name='revID' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_Revision*'/>
+</method>
+<method selector='deleted'>
+<retval type='B' declared_type='_Bool'/>
+</method>
+<method selector='docID'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='generation'>
+<retval type='I' declared_type='unsigned int'/>
+</method>
+<method selector='generationFromRevID:' class_method='true'>
+<arg type='@' index='0' name='revID' declared_type='NSString*'/>
+<retval type='I' declared_type='unsigned int'/>
+</method>
+<method selector='initWithBody:'>
+<arg type='@' index='0' name='body' declared_type='TD_Body*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithDocID:revID:deleted:'>
+<arg type='@' index='0' name='docID' declared_type='NSString*'/>
+<arg type='@' index='1' name='revID' declared_type='NSString*'/>
+<arg type='B' index='2' name='deleted' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithProperties:'>
+<arg type='@' index='0' name='properties' declared_type='NSDictionary*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='missing'>
+<retval type='B' declared_type='_Bool'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg type='@' index='0' name='key' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='parseRevID:intoGeneration:andSuffix:' class_method='true'>
+<arg type='@' index='0' name='revID' declared_type='NSString*'/>
+<arg type='^i' index='1' name='outNum' declared_type='int*'/>
+<arg type='^@' index='2' name='outSuffix' declared_type='NSString**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='properties'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='revID'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='revisionWithProperties:' class_method='true'>
+<arg type='@' index='0' name='properties' declared_type='NSDictionary*'/>
+<retval type='@' declared_type='TD_Revision*'/>
+</method>
+<method selector='sequence'>
+<retval type='q' declared_type='SequenceNumber'/>
+</method>
+<method selector='setAsJSON:'>
+<arg type='@' index='0' name='asJSON' declared_type='NSData*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setBody:'>
+<arg type='@' index='0' name='body' declared_type='TD_Body*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMissing:'>
+<arg type='B' index='0' name='missing' declared_type='_Bool'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setProperties:'>
+<arg type='@' index='0' name='properties' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSequence:'>
+<arg type='q' index='0' name='sequence' declared_type='SequenceNumber'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='TD_RevisionList'>
+<method selector='addRev:'>
+<arg type='@' index='0' name='rev' declared_type='TD_Revision*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='allDocIDs'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='allRevIDs'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='allRevisions'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='count'>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method selector='init'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithArray:'>
+<arg type='@' index='0' name='revs' declared_type='NSArray*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='limit:'>
+<arg type='I' index='0' name='limit' declared_type='NSUInteger'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg type='I' index='0' name='index' declared_type='NSUInteger'/>
+<retval type='@' declared_type='TD_Revision*'/>
+</method>
+<method selector='objectEnumerator'>
+<retval type='@' declared_type='NSEnumerator*'/>
+</method>
+<method selector='removeRev:'>
+<arg type='@' index='0' name='rev' declared_type='TD_Revision*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='revWithDocID:revID:'>
+<arg type='@' index='0' name='docID' declared_type='NSString*'/>
+<arg type='@' index='1' name='revID' declared_type='NSString*'/>
+<retval type='@' declared_type='TD_Revision*'/>
+</method>
+<method selector='sortBySequence'>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='TD_Server'>
+<method selector='close'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='directory'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='initWithDirectory:error:'>
+<arg type='@' index='0' name='dirPath' declared_type='NSString*'/>
+<arg type='^@' index='1' name='outError' declared_type='NSError**'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithDirectory:options:error:'>
+<arg type='@' index='0' name='dirPath' declared_type='NSString*'/>
+<arg type='^{TD_DatabaseManagerOptions=BB}' index='1' name='options' declared_type='TD_DatabaseManagerOptions*' const='true'/>
+<arg type='^@' index='2' name='outError' declared_type='NSError**'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='queue:'>
+<arg type='@?' index='0' name='block' declared_type='void (^)()' function_pointer='true'>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='tellDatabaseManager:'>
+<arg type='@?' index='0' name='block' declared_type='void (^)(TD_DatabaseManager *)' function_pointer='true'>
+<arg type='@' declared_type='TD_DatabaseManager*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='tellDatabaseNamed:to:'>
+<arg type='@' index='0' name='dbName' declared_type='NSString*'/>
+<arg type='@?' index='1' name='block' declared_type='void (^)(TD_Database *)' function_pointer='true'>
+<arg type='@' declared_type='TD_Database*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='waitForDatabaseManager:'>
+<arg type='@?' index='0' name='block' declared_type='id (^)(TD_DatabaseManager *)' function_pointer='true'>
+<arg type='@' declared_type='TD_DatabaseManager*'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='TD_View'>
+<method selector='collation'>
+<retval type='i' declared_type='TDViewCollation'/>
+</method>
+<method selector='compiler' class_method='true'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='database'>
+<retval type='@' declared_type='TD_Database*'/>
+</method>
+<method selector='deleteView'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='lastSequenceIndexed'>
+<retval type='q' declared_type='SequenceNumber'/>
+</method>
+<method selector='mapBlock'>
+<retval type='@?' declared_type='TDMapBlock' function_pointer='true'>
+<arg type='@' declared_type='NSDictionary*'/>
+<arg type='@?' declared_type='TDMapEmitBlock'/>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+<method selector='mapContentOptions'>
+<retval type='I' declared_type='TDContentOptions'/>
+</method>
+<method selector='name'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='queryWithOptions:status:'>
+<arg type='^{TDQueryOptions=@@@IIIIBBBBBBB}' index='0' name='options' declared_type='TDQueryOptions*' const='true'/>
+<arg type='@' index='1' name='outStatus' declared_type='id'/>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='reduceBlock'>
+<retval type='@?' declared_type='TDReduceBlock' function_pointer='true'>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='B' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</retval>
+</method>
+<method selector='removeIndex'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setCollation:'>
+<arg type='i' index='0' name='collation' declared_type='TDViewCollation'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setCompiler:' class_method='true'>
+<arg type='@' index='0' name='compiler' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMapBlock:reduceBlock:version:'>
+<arg type='@?' index='0' name='mapBlock' declared_type='TDMapBlock' function_pointer='true'>
+<arg type='@' declared_type='NSDictionary*'/>
+<arg type='@?' declared_type='TDMapEmitBlock'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<arg type='@?' index='1' name='reduceBlock' declared_type='TDReduceBlock' function_pointer='true'>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='B' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='@' index='2' name='version' declared_type='NSString*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setMapContentOptions:'>
+<arg type='I' index='0' name='mapContentOptions' declared_type='TDContentOptions'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='stale'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='totalValues:' class_method='true'>
+<arg type='@' index='0' name='values' declared_type='NSArray*'/>
+<retval type='@' declared_type='NSNumber*'/>
+</method>
+<method selector='updateIndex'>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<informal_protocol name='TDViewCompiler'>
+<method type='@?16@0:4@8@12' selector='compileMapFunction:language:'>
+<arg type='@' index='0' name='mapSource' declared_type='NSString*'/>
+<arg type='@' index='1' name='language' declared_type='NSString*'/>
+<retval type='@?' declared_type='TDMapBlock' function_pointer='true'>
+<arg type='@' declared_type='NSDictionary*'/>
+<arg type='@?' declared_type='TDMapEmitBlock'/>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+<method type='@?16@0:4@8@12' selector='compileReduceFunction:language:'>
+<arg type='@' index='0' name='reduceSource' declared_type='NSString*'/>
+<arg type='@' index='1' name='language' declared_type='NSString*'/>
+<retval type='@?' declared_type='TDReduceBlock' function_pointer='true'>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='@' declared_type='NSArray*'/>
+<arg type='B' declared_type='BOOL'/>
+<retval type='@' declared_type='id'/>
+</retval>
+</method>
+</informal_protocol>
+<informal_protocol name='TD_ValidationContext'>
+<method type='B12@0:4@8' selector='allowChangesOnlyTo:'>
+<arg type='@' index='0' name='allowedKeys' declared_type='NSArray*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='@8@0:4' selector='changedKeys'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method type='^i8@0:4' selector='currentRevision'>
+<retval type='^i' declared_type='int*'/>
+</method>
+<method type='B12@0:4@8' selector='disallowChangesTo:'>
+<arg type='@' index='0' name='disallowedKeys' declared_type='NSArray*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='B12@0:4@?8' selector='enumerateChanges:'>
+<arg type='@?' index='0' name='enumerator' declared_type='TDChangeEnumeratorBlock' function_pointer='true'>
+<arg type='@' declared_type='NSString*'/>
+<arg type='@' declared_type='id'/>
+<arg type='@' declared_type='id'/>
+<retval type='B' declared_type='BOOL'/>
+</arg>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='@8@0:4' selector='errorMessage'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method type='i8@0:4' selector='errorType'>
+<retval type='i' declared_type='int'/>
+</method>
+<method type='v12@0:4@8' selector='setErrorMessage:'>
+<arg type='@' index='0' name='errorMessage' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4i8' selector='setErrorType:'>
+<arg type='i' index='0' name='errorType' declared_type='int'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		376FE9E617500ABD00E518E2 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 376FE9E717500ABD00E518E2 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				376FE9EC17500AF400E518E2 /* Build Framework */,
+				376FEA0017500D1600E518E2 /* Copy Framework to RubyMotion project */,
+			);
+			dependencies = (
+				376FE9FF17500CA800E518E2 /* PBXTargetDependency */,
+				376FE9EB17500AD000E518E2 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		376FE9D6175002FB00E518E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376FE9D5175002FB00E518E2 /* Foundation.framework */; };
+		376FE9DB175002FB00E518E2 /* CouchBaseViews.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 376FE9DA175002FB00E518E2 /* CouchBaseViews.h */; };
+		376FE9DD175002FB00E518E2 /* CouchBaseViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FE9DC175002FB00E518E2 /* CouchBaseViews.m */; };
+		376FE9E5175008B700E518E2 /* CouchBaseViews.h in Headers */ = {isa = PBXBuildFile; fileRef = 376FE9DA175002FB00E518E2 /* CouchBaseViews.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		376FE9F317500C0B00E518E2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376FE9F217500C0B00E518E2 /* CoreFoundation.framework */; };
+		376FE9F917500C0B00E518E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 376FE9F717500C0B00E518E2 /* InfoPlist.strings */; };
+		37A7BB35175292C700B187DB /* CouchCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A7BB34175292C700B187DB /* CouchCocoa.framework */; };
+		37A7BB37175292D900B187DB /* TouchDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A7BB36175292D900B187DB /* TouchDB.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376FE9EA17500AD000E518E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376FE9CA175002FB00E518E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376FE9D1175002FB00E518E2;
+			remoteInfo = CouchBaseViews;
+		};
+		376FE9FE17500CA800E518E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376FE9CA175002FB00E518E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376FE9F017500C0B00E518E2;
+			remoteInfo = CouchBaseViewsResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		376FE9D0175002FB00E518E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				376FE9DB175002FB00E518E2 /* CouchBaseViews.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		376FE9D2175002FB00E518E2 /* libCouchBaseViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCouchBaseViews.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		376FE9D5175002FB00E518E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		376FE9D9175002FB00E518E2 /* CouchBaseViews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CouchBaseViews-Prefix.pch"; sourceTree = "<group>"; };
+		376FE9DA175002FB00E518E2 /* CouchBaseViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouchBaseViews.h; sourceTree = "<group>"; };
+		376FE9DC175002FB00E518E2 /* CouchBaseViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouchBaseViews.m; sourceTree = "<group>"; };
+		376FE9F117500C0B00E518E2 /* CouchBaseViews.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouchBaseViews.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		376FE9F217500C0B00E518E2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		376FE9F617500C0B00E518E2 /* CouchBaseViewsResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CouchBaseViewsResources-Info.plist"; sourceTree = "<group>"; };
+		376FE9F817500C0B00E518E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		376FE9FA17500C0B00E518E2 /* CouchBaseViewsResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CouchBaseViewsResources-Prefix.pch"; sourceTree = "<group>"; };
+		37A7BB34175292C700B187DB /* CouchCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchCocoa.framework; path = ../vendor/CouchCocoa.framework; sourceTree = "<group>"; };
+		37A7BB36175292D900B187DB /* TouchDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TouchDB.framework; path = ../vendor/TouchDB.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376FE9CF175002FB00E518E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376FE9D6175002FB00E518E2 /* Foundation.framework in Frameworks */,
+				37A7BB35175292C700B187DB /* CouchCocoa.framework in Frameworks */,
+				37A7BB37175292D900B187DB /* TouchDB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376FE9EE17500C0B00E518E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376FE9F317500C0B00E518E2 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376FE9C9175002FB00E518E2 = {
+			isa = PBXGroup;
+			children = (
+				376FE9D7175002FB00E518E2 /* CouchBaseViews */,
+				376FE9F417500C0B00E518E2 /* CouchBaseViewsResources */,
+				376FE9D4175002FB00E518E2 /* Frameworks */,
+				376FE9D3175002FB00E518E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		376FE9D3175002FB00E518E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376FE9D2175002FB00E518E2 /* libCouchBaseViews.a */,
+				376FE9F117500C0B00E518E2 /* CouchBaseViews.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376FE9D4175002FB00E518E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37A7BB36175292D900B187DB /* TouchDB.framework */,
+				37A7BB34175292C700B187DB /* CouchCocoa.framework */,
+				376FE9D5175002FB00E518E2 /* Foundation.framework */,
+				376FE9F217500C0B00E518E2 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		376FE9D7175002FB00E518E2 /* CouchBaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				376FE9DA175002FB00E518E2 /* CouchBaseViews.h */,
+				376FE9DC175002FB00E518E2 /* CouchBaseViews.m */,
+				376FE9D8175002FB00E518E2 /* Supporting Files */,
+			);
+			path = CouchBaseViews;
+			sourceTree = "<group>";
+		};
+		376FE9D8175002FB00E518E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				376FE9D9175002FB00E518E2 /* CouchBaseViews-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		376FE9F417500C0B00E518E2 /* CouchBaseViewsResources */ = {
+			isa = PBXGroup;
+			children = (
+				376FE9F517500C0B00E518E2 /* Supporting Files */,
+			);
+			path = CouchBaseViewsResources;
+			sourceTree = "<group>";
+		};
+		376FE9F517500C0B00E518E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				376FE9F617500C0B00E518E2 /* CouchBaseViewsResources-Info.plist */,
+				376FE9F717500C0B00E518E2 /* InfoPlist.strings */,
+				376FE9FA17500C0B00E518E2 /* CouchBaseViewsResources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		376FE9E4175008A600E518E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376FE9E5175008B700E518E2 /* CouchBaseViews.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		376FE9D1175002FB00E518E2 /* CouchBaseViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376FE9E0175002FB00E518E2 /* Build configuration list for PBXNativeTarget "CouchBaseViews" */;
+			buildPhases = (
+				376FE9E4175008A600E518E2 /* Headers */,
+				376FE9CE175002FB00E518E2 /* Sources */,
+				376FE9CF175002FB00E518E2 /* Frameworks */,
+				376FE9D0175002FB00E518E2 /* CopyFiles */,
+				376FE9E31750068600E518E2 /* Prepare Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CouchBaseViews;
+			productName = CouchBaseViews;
+			productReference = 376FE9D2175002FB00E518E2 /* libCouchBaseViews.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		376FE9F017500C0B00E518E2 /* CouchBaseViewsResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376FE9FB17500C0B00E518E2 /* Build configuration list for PBXNativeTarget "CouchBaseViewsResources" */;
+			buildPhases = (
+				376FE9ED17500C0B00E518E2 /* Sources */,
+				376FE9EE17500C0B00E518E2 /* Frameworks */,
+				376FE9EF17500C0B00E518E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CouchBaseViewsResources;
+			productName = CouchBaseViewsResources;
+			productReference = 376FE9F117500C0B00E518E2 /* CouchBaseViews.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376FE9CA175002FB00E518E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "David Oram";
+			};
+			buildConfigurationList = 376FE9CD175002FB00E518E2 /* Build configuration list for PBXProject "CouchBaseViews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 376FE9C9175002FB00E518E2;
+			productRefGroup = 376FE9D3175002FB00E518E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376FE9D1175002FB00E518E2 /* CouchBaseViews */,
+				376FE9E617500ABD00E518E2 /* Framework */,
+				376FE9F017500C0B00E518E2 /* CouchBaseViewsResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376FE9EF17500C0B00E518E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376FE9F917500C0B00E518E2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		376FE9E31750068600E518E2 /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n";
+		};
+		376FE9EC17500AF400E518E2 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+		};
+		376FEA0017500D1600E518E2 /* Copy Framework to RubyMotion project */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Framework to RubyMotion project";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_COPY_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_COPY_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\nFRAMEWORK_DEST=${PROJECT_DIR}/../vendor\nif [[ -d ${FRAMEWORK_DEST}/${SF_WRAPPER_NAME} ]]\nthen\n  echo \"Del old framework: ${FRAMEWORK_DEST}/${SF_WRAPPER_NAME}\"\n  rm -rf ${FRAMEWORK_DEST}/${SF_WRAPPER_NAME}\nfi\necho \"Copying framework\"\ncp -pLR ${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME} ${FRAMEWORK_DEST}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376FE9CE175002FB00E518E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376FE9DD175002FB00E518E2 /* CouchBaseViews.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376FE9ED17500C0B00E518E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376FE9EB17500AD000E518E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376FE9D1175002FB00E518E2 /* CouchBaseViews */;
+			targetProxy = 376FE9EA17500AD000E518E2 /* PBXContainerItemProxy */;
+		};
+		376FE9FF17500CA800E518E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376FE9F017500C0B00E518E2 /* CouchBaseViewsResources */;
+			targetProxy = 376FE9FE17500CA800E518E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		376FE9F717500C0B00E518E2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376FE9F817500C0B00E518E2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376FE9DE175002FB00E518E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		376FE9DF175002FB00E518E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		376FE9E1175002FB00E518E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CouchBaseViews.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../vendor\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CouchBaseViews/CouchBaseViews-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		376FE9E2175002FB00E518E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CouchBaseViews.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../vendor\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CouchBaseViews/CouchBaseViews-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		376FE9E817500ABD00E518E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		376FE9E917500ABD00E518E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		376FE9FC17500C0B00E518E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CouchBaseViewsResources/CouchBaseViewsResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CouchBaseViewsResources/CouchBaseViewsResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = CouchBaseViews;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		376FE9FD17500C0B00E518E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CouchBaseViewsResources/CouchBaseViewsResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CouchBaseViewsResources/CouchBaseViewsResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = CouchBaseViews;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376FE9CD175002FB00E518E2 /* Build configuration list for PBXProject "CouchBaseViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376FE9DE175002FB00E518E2 /* Debug */,
+				376FE9DF175002FB00E518E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376FE9E0175002FB00E518E2 /* Build configuration list for PBXNativeTarget "CouchBaseViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376FE9E1175002FB00E518E2 /* Debug */,
+				376FE9E2175002FB00E518E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376FE9E717500ABD00E518E2 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376FE9E817500ABD00E518E2 /* Debug */,
+				376FE9E917500ABD00E518E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376FE9FB17500C0B00E518E2 /* Build configuration list for PBXNativeTarget "CouchBaseViewsResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376FE9FC17500C0B00E518E2 /* Debug */,
+				376FE9FD17500C0B00E518E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 376FE9CA175002FB00E518E2 /* Project object */;
+}
